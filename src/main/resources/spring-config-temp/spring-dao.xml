@@ -23,7 +23,7 @@
         <property name="dataSource" ref="dataSource" /> 
         <property name="packagesToScan">
             <list>
-            	<value>${hibernate.packagesToScan}</value>
+            	<value>${package_root}.model.*.pojo</value>
         	</list>
         </property>
     </bean>
@@ -70,6 +70,13 @@
             <tx:method name="*" propagation="SUPPORTS"/>
         </tx:attributes>
     </tx:advice>
+    <!-- 通用事务的AOP配置， -->
+	<aop:config>
+		<aop:pointcut id="interceptorPointCuts"
+			expression="(execution(* ${package_root}.model.*.service.*.*(..)))
+			" />
+		<aop:advisor advice-ref="commonAdvice" pointcut-ref="interceptorPointCuts" />
+	</aop:config>
     
     <tx:annotation-driven transaction-manager="transactionManager"/>
 </beans>

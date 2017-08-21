@@ -9,7 +9,7 @@
 		<param-name>contextConfigLocation</param-name>
 		<!-- 加载所有spring-开头的xml文件 -->
 		<param-value>
-			classpath*:spring-config/spring-mvc.xml,
+			classpath*:spring-config/spring-project.xml,
 			classpath*:spring-config/spring-task.xml
 		</param-value>
 	</context-param>
@@ -25,7 +25,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath*:spring-config/spring-mvc.xml</param-value>
+			<param-value>classpath*:spring-config/spring-project.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -42,10 +42,6 @@
 	<filter-mapping>
 		<filter-name>springSecurityFilterChain</filter-name>
 		<url-pattern>/admin/*</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/weixin/*</url-pattern>
 	</filter-mapping>
 
 
