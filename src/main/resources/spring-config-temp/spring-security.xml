@@ -9,6 +9,9 @@
 	>
 
 	<debug />
+	
+	<beans:bean id="adminUserService" class="cn.sowell.copframe.web.CommonAdminUserServiceImpl" />
+	
 	<!-- 处理管理系统登录之后的认证对象 -->
 	<authentication-manager alias="authenticationManager" id="authenticationManager" erase-credentials="false">
 		<authentication-provider user-service-ref="adminUserService">

@@ -4,7 +4,7 @@
 
 	<groupId>cn.sowell.copframe</groupId>
 	<artifactId>cpf-web</artifactId>
-	<version>0.2.0</version>
+	<version>0.2.3</version>
 	<packaging>jar</packaging>
 
 	<name>cpf-web</name>
@@ -173,6 +173,12 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-c3p0</artifactId>
 			<version>${version.hibernate}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.mchange</groupId>
+					<artifactId>c3p0</artifactId> 
+		        </exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.mchange</groupId>
@@ -196,7 +202,7 @@
 		<dependency>
 			<groupId>cn.sowell.copframe</groupId>
 			<artifactId>cpf-spring</artifactId>
-			<version>0.3</version>
+			<version>0.3.1</version>
 		</dependency>
 		
 	</dependencies>
@@ -207,8 +213,8 @@
             <url>http://192.168.1.6:8081/nexus/content/repositories/thirdparty/</url>
         </repository> -->
         <repository>
-        	<id>aliyun51-nexus</id>
-        	<url>http://106.14.249.51:32108/repository/nexus/</url>
+        	<id>aliyun44-nexus</id>
+        	<url>http://139.196.123.44:32108/repository/nexus/</url>
         </repository>
     </distributionManagement>
 	<build>
@@ -238,6 +244,16 @@
 				</configuration>
 			</plugin> 
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/webapp/resources/media</directory>
+				<targetPath>META-INF/resources/media</targetPath>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath></targetPath>
+			</resource>
+		</resources>
 	</build>
 	
 </project>
