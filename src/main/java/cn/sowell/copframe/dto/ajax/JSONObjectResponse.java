@@ -2,10 +2,9 @@ package cn.sowell.copframe.dto.ajax;
 
 import com.alibaba.fastjson.JSONObject;
 
-@Deprecated
-public class JsonResponse extends ResponseJSON {
+public class JSONObjectResponse extends ResponseJSON{
 	private JSONObject jsonObject = new JSONObject();
-	public JsonResponse() {
+	public JSONObjectResponse() {
 		jsonObject = new JSONObject();
 	}
 	
@@ -13,12 +12,12 @@ public class JsonResponse extends ResponseJSON {
 		return jsonObject;
 	}
 
-	public JsonResponse setJsonObject(JSONObject jsonObject) {
+	public JSONObjectResponse setJsonObject(JSONObject jsonObject) {
 		this.jsonObject = jsonObject;
 		return this;
 	}
 	
-	public JsonResponse put(String key, Object value){
+	public JSONObjectResponse put(String key, Object value){
 		jsonObject.put(key, value);
 		return this;
 	}
@@ -27,7 +26,6 @@ public class JsonResponse extends ResponseJSON {
 		jsonObject.remove(key);
 	}
 	
-
 	public String getStatus() {
 		return jsonObject.getString("status");
 	}
