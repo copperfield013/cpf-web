@@ -17,8 +17,8 @@ import org.springframework.util.StreamUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
-import cn.sowell.copframe.common.property.PropertyPlaceholder;
 import cn.sowell.copframe.dto.ajax.JsonRequest;
+import cn.sowell.copframe.spring.properties.PropertyPlaceholder;
 
 public class JsonRequestConverter implements HttpMessageConverter<JsonRequest>{
 	

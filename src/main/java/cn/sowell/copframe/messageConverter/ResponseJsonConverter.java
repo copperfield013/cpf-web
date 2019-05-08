@@ -15,8 +15,8 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
 import org.springframework.util.StreamUtils;
 
-import cn.sowell.copframe.common.property.PropertyPlaceholder;
 import cn.sowell.copframe.dto.ajax.ResponseJSON;
+import cn.sowell.copframe.spring.properties.PropertyPlaceholder;
 
 public class ResponseJsonConverter implements HttpMessageConverter<ResponseJSON>{
 

@@ -15,12 +15,12 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
 import org.springframework.util.StreamUtils;
 
-import cn.sowell.copframe.common.property.PropertyPlaceholder;
-import cn.sowell.copframe.dto.ajax.AjaxPageResponse;
-
 import com.alibaba.fastjson.serializer.JSONSerializer;
 import com.alibaba.fastjson.serializer.SerializeWriter;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+
+import cn.sowell.copframe.dto.ajax.AjaxPageResponse;
+import cn.sowell.copframe.spring.properties.PropertyPlaceholder;
 
 public class AjaxPageResponseConverter implements HttpMessageConverter<AjaxPageResponse>{
 

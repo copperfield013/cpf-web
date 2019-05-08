@@ -4,7 +4,7 @@
 
 	<groupId>cn.sowell.copframe</groupId>
 	<artifactId>cpf-web</artifactId>
-	<version>0.2.10</version>
+	<version>0.2.13</version>
 	<packaging>jar</packaging>
 
 	<name>cpf-web</name>
@@ -17,7 +17,8 @@
 		<version.hibernate>5.0.7.Final</version.hibernate>
 		<version.hibernate.annotations>3.5.6-Final</version.hibernate.annotations>
 		<version.proxool>0.9.1</version.proxool>
-		<version.cpf.dao>0.2</version.cpf.dao>
+		<version.cpf.dao>0.5</version.cpf.dao>
+		<version.cpf.spring>0.3.15</version.cpf.spring>
 	</properties>
 	
 	<dependencies>
@@ -209,6 +210,12 @@
 			<groupId>cn.sowell.copframe</groupId>
 			<artifactId>cpf-dao</artifactId>
 			<version>${version.cpf.dao}</version>
+		</dependency>
+		<dependency>
+			<groupId>cn.sowell.copframe</groupId>
+			<artifactId>cpf-spring</artifactId>
+			<version>${version.cpf.spring}</version>
+			<optional>true</optional>
 		</dependency>
 		
 	</dependencies>
