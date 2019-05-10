@@ -2,12 +2,12 @@ package cn.sowell.copframe.web.poll;
 
 import java.util.LinkedList;
 
-public class MessagesSequeue {
+public class MessagesSequence {
 	private LinkedList<Message> messages = new LinkedList<>();
 	private int beginIndex;
 	private int endIndex;
 	
-	MessagesSequeue(){
+	MessagesSequence(){
 		
 	}
 	

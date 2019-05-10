@@ -47,8 +47,8 @@ public class ProgressLogger {
 	 * @param index
 	 * @return
 	 */
-	public MessagesSequeue getMessagesFrom(int index){
-		MessagesSequeue sequeue = new MessagesSequeue();
+	public MessagesSequence getMessagesFrom(int index){
+		MessagesSequence sequeue = new MessagesSequence();
 		if(messages.size() > index) {
 			sequeue.setBeginIndex(index + 1);
 			int endIndex = messages.size() - 1;
@@ -61,8 +61,8 @@ public class ProgressLogger {
 	}
 
 
-	public MessagesSequeue getMessagesFrom(Integer msgIndex, Integer maxMsgCount) {
-		MessagesSequeue sequeue = new MessagesSequeue();
+	public MessagesSequence getMessagesFrom(Integer msgIndex, Integer maxMsgCount) {
+		MessagesSequence sequeue = new MessagesSequence();
 		if(messages.size() > msgIndex) {
 			int endIndex = messages.size() - 1;
 			int beginIndex = msgIndex;

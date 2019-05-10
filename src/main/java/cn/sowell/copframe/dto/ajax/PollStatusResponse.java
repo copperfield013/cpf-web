@@ -2,7 +2,7 @@ package cn.sowell.copframe.dto.ajax;
 
 import com.alibaba.fastjson.JSONObject;
 
-import cn.sowell.copframe.web.poll.MessagesSequeue;
+import cn.sowell.copframe.web.poll.MessagesSequence;
 
 public class PollStatusResponse extends ResponseJSON{
 	private JSONObjectResponse json = new JSONObjectResponse();
@@ -81,8 +81,8 @@ public class PollStatusResponse extends ResponseJSON{
 		return json.getStatus();
 	}
 
-	public void setMessageSequeue(MessagesSequeue messagesSequeue) {
-		json.put("messageSequeue", messagesSequeue);
+	public void setMessageSequence(MessagesSequence messagesSequence) {
+		json.put("messageSequence", messagesSequence);
 	}
 	
 	/**
